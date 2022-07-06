@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%=Pagetitle%>'s Information</title>
+    <style media="screen">
+
+    body{
+background-image: url(result.jpg);
+background-size: 100%;
+    }
+h1{
+  font-family: 'Montserrat', sans-serif;
+  color: gold;
+}
+    .box{
+      position: absolute;
+      left :50px;
+      top:100px;
+
+    }
+    </style>
+      <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <div class="box">
+    <h1>You have searched for the <%=CoinName%>(<%=symbol%>)</h1>
+    <h1>Current Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: $<%=price_usd%> </h1>
+    <h1>Trading Volume&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <%=volume%></h1>
+    <h1>(in last 24 hr)</h1>
+    <h1>Total Market Cap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: $<%=market_cap%></h1>
+    <h1>Rank by Market Cap            : <%=rank%></h1>
+    <h1>Market Dominance&nbsp;&nbsp;&nbsp;&nbsp;: <%=marketdominance%>%</h1>
+    <h1>All time high&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: $<%=all_time_high%></h1>
+    <h1>Annual Inflation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <%=annualinflationpercent%>%</h1>
+    </div>
+
+  </body>
+</html>
