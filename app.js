@@ -8,16 +8,15 @@ app.use(express.static(__dirname));
 app.set("view engine", "ejs");
 app.use(bodyparser.urlencoded({ extended: true }));
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.render("index");
 });
 
 app.post("/", function (req, res) {
   const nameofcoin = req.body.coinname;
   const url =
     "https://data.messari.io/api/v1/assets/" + nameofcoin + "/metrics";
-  console.log(nameofcoin);
+
   https.get(url, (response) => {
-    console.log("Data");
     response.on("data", function (data) {
       const coin = JSON.parse(data);
       if (coin.data == null) {
